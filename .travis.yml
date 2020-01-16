@@ -6,7 +6,7 @@ services:
   - docker
 
 before_install:
-  - docker build -t sirjohncabbage/docker-react -f Docerfile.dev .
+  - docker build -t sirjohncabbage/docker-react -f Dockerfile.dev .
 
 script:
   - docker run -e CI=true sirjohncabbage/docker-react npm run test
